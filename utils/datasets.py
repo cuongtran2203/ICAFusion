@@ -391,7 +391,7 @@ class LoadStreams:  # multiple IP or RTSP cameras
 def img2label_paths(img_paths):
     # Define label paths as a function of image paths
     sb, t = 'labels', []  # /images/, /labels/
-    src = "/home/RGB_IR_dataset"
+    src = os.path.join(os.getcwd(),"RGB_IR_dataset")
     for img_path in img_paths:
         data = img_path.split("/")
         # print("data-------:",data)
